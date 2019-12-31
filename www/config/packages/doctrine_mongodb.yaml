@@ -1,0 +1,15 @@
+doctrine_mongodb:
+    connections:
+        default:
+            server: "%mongodb_server%"
+            options: {}
+    default_database: romir
+    document_managers:
+        default:
+            mappings:
+                App:
+                    is_bundle: false
+                    type: annotation
+                    dir: '%kernel.project_dir%/src/Document'
+                    prefix: 'App\Document'
+                    alias: App
